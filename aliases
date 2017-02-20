@@ -1,0 +1,4 @@
+alias dk="setxkbmap dk"
+alias us="setxkbmap us"
+alias x="xinit"
+alias v="vim"
