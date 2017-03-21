@@ -13,6 +13,8 @@ Plug 'thinca/vim-quickrun'
 Plug 'myusuf3/numbers.vim'
 Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'fholgado/minibufexpl.vim'
+Plug 'altercation/vim-colors-solarized'
 
 " Initialize plugin system
 call plug#end()
@@ -31,3 +33,6 @@ nmap <leader>b :buffers<CR>
 
 set number
 
+"syntax enable
+"set background=light
+"colorscheme solarized
