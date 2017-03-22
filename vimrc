@@ -1,9 +1,11 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
 
+Plug 'junegunn/vim-plug'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mattn/calendar-vim'
 Plug 'jceb/vim-orgmode'

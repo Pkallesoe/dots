@@ -1,0 +1,19 @@
+#! /bin/bash
+u="$USER"
+
+echo "Linking files..."
+ln -sf $(pwd)/xinit ~/.xinit
+ln -sf $(pwd)/Xresources ~/.Xresources
+ln -sf $(pwd)/alias ~/.alias
+ln -sf $(pwd)/vimrc ~/.vimrc
+ln -sf $(pwd)/xserverrc ~/.xserverrc
+ln -sf $(pwd)/bashrc ~/.bashrc
+ln -sf $(pwd)/bin ~/bin
+if [ "$u" == "peter" ] ; then
+	ln -sf $(pwd)/xmonad.hs ~/.xmonad/xmonad.hs
+fi
+echo "Done linking all files"
+echo ""
+echo "Downloading vim plugin manager"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
