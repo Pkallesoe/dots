@@ -17,7 +17,8 @@ Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'fholgado/minibufexpl.vim'
 Plug 'altercation/vim-colors-solarized'
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+" Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'christoomey/vim-tmux-navigator'
 
 " Initialize plugin system
 call plug#end()
