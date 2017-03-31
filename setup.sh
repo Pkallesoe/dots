@@ -9,6 +9,7 @@ ln -sf $(pwd)/vimrc ~/.vimrc
 ln -sf $(pwd)/xserverrc ~/.xserverrc
 ln -sf $(pwd)/bashrc ~/.bashrc
 ln -sf $(pwd)/bin ~/bin
+ln -sf $(pwd)/tmux ~/.tmux
 if [ "$u" == "peter" ] ; then
 	ln -sf $(pwd)/xmonad.hs ~/.xmonad/xmonad.hs
 fi
