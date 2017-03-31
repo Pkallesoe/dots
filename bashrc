@@ -10,3 +10,5 @@ PS1='[\u@\h \W]\$ '
 
 . ~/.aliases
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

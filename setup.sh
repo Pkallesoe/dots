@@ -4,7 +4,7 @@ u="$USER"
 echo "Linking files..."
 ln -sf $(pwd)/xinit ~/.xinit
 ln -sf $(pwd)/Xresources ~/.Xresources
-ln -sf $(pwd)/alias ~/.alias
+ln -sf $(pwd)/aliases ~/.aliases
 ln -sf $(pwd)/vimrc ~/.vimrc
 ln -sf $(pwd)/xserverrc ~/.xserverrc
 ln -sf $(pwd)/bashrc ~/.bashrc

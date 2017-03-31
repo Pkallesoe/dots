@@ -17,6 +17,7 @@ Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'fholgado/minibufexpl.vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 
 " Initialize plugin system
 call plug#end()
@@ -38,3 +39,11 @@ set number
 "syntax enable
 "set background=light
 "colorscheme solarized
+
+
+"" Java test area ""
+autocmd Filetype java set makeprg=javac\ %
+set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
+map <F9> :make<Return>:copen<Return>
+map <F10> :cprevious<Return>
+map <F11> :cnext<Return>
