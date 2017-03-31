@@ -21,3 +21,5 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # Setup tmux plugin system
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo "Prefix + I to install tmux plugins"
+echo "Prefix + U to update tmux plugins"
