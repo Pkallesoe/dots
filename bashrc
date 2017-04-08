@@ -12,3 +12,8 @@ PS1='[\u@\h \W]\$ '
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+function calc
+{
+      echo "${1}" | bc -l;
+}
