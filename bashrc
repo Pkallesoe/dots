@@ -17,3 +17,11 @@ function calc
 {
       echo "${1}" | bc -l;
 }
+
+if [ -n "$DISPLAY" ]; then
+    export BROWSER=qutebrowser
+else
+    export BROWSER=links
+fi
+
+export DE=xfce

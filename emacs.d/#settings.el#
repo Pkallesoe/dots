@@ -1,0 +1,26 @@
+
+(menu-bar-mode -1)
+
+(setq rm-blacklist ".*")
+
+(display-battery-mode 1)
+(defun battery-level ()
+  (string-to-number (shell-command-to-string "echo \"$(pmset -g ps | awk 'NR==2' | perl -pe 's/.*?(\\d+)%.*/\\1/')\"")))
+
+(defvar battery-status-function 'battery-level)
+
+(defun battery-indicator-string () 
+  (let* ((bat (funcall battery-status-function))
+         (index (cl-position-if (lambda (e) (> bat e)) '(87 75 62 50 37 25 12 7 -1)))
+         (symbol (nth index '("█" "▇" "▆" "▅" "▄" "▃" "▂" "▁" "!")))
+         (color (nth index (mapcar (lambda (c) (apply 'color-rgb-to-hex c)) (color-gradient '(.3 1 .2) '(1 .2 .1) 9)))))
+    (propertize symbol 'face (list :foreground color :box (if (<= bat 7) color nil)))))
+
+  
+
+(mapcar (lambda (c) (apply 'color-rgb-to-hex c)) (color-gradient '(.4 .9 .2) '(1 .2 .1) 9))
+("#75d330" "#84c12d" "#93af2b" "#a39e28" "#b28c26" "#c17a23" "#d16821" "#e0561e" "#ef441c")
+
+(display-time-mode 1)
+(setq display-time-string-forms
+       '((propertize (concat " " 24-hours ":" minutes " "))))

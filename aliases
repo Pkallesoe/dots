@@ -2,3 +2,5 @@ alias dk="setxkbmap dk"
 alias us="setxkbmap us"
 alias x="xinit"
 alias v="vim"
+alias e="emacs"
+alias ls='ls --color=auto --group-directories-first -h'

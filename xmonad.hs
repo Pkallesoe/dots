@@ -15,6 +15,7 @@ import XMonad.Layout.NoBorders (smartBorders)
 import XMonad.Layout.SimplestFloat
 
 import XMonad.Actions.FloatKeys
+import XMonad.Actions.CycleWS
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -22,7 +23,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "urxvt"
+myTerminal      = "urxvt -e tmux"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -34,7 +35,7 @@ myClickJustFocuses = False
 
 -- Width of the window border in pixels.
 --
-myBorderWidth   = 2
+myBorderWidth   = 4
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -86,7 +87,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_n     ), refresh)
 
     -- Move focus to the next window
-    , ((modm,               xK_Tab   ), windows W.focusDown)
+--    , ((modm,               xK_Tab   ), windows W.focusDown)
 
     -- Move focus to the next window
     , ((modm,               xK_j     ), windows W.focusDown)
@@ -123,10 +124,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Float window keys
     , ((modm,               xK_f     ), withFocused (keysMoveWindowTo (683, 384) (1/2, 1/2)))
-    , ((modm,               xK_d     ), withFocused (keysResizeWindow (-10,-10) (1,1)))
-    , ((modm,               xK_s     ), withFocused (keysResizeWindow (10,10) (1,1)))
-    , ((modm .|. shiftMask, xK_d     ), withFocused (keysAbsResizeWindow (-10,-10) (1024,752)))
-    , ((modm .|. shiftMask, xK_s     ), withFocused (keysAbsResizeWindow (10,10) (1024,752)))
+    , ((modm,               xK_d     ), withFocused (keysResizeWindow (-10,-10) (1/2,1/2)))
+    , ((modm,               xK_s     ), withFocused (keysResizeWindow (15,15) (1/2,1/2)))
+    , ((modm .|. shiftMask, xK_d     ), withFocused (keysAbsResizeWindow (-10,-10) (1366,768)))
+    , ((modm .|. shiftMask, xK_s     ), withFocused (keysAbsResizeWindow (10,10) (1366,768)))
+
+    , ((modm,               xK_Tab),     toggleWS)
 
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.

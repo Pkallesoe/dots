@@ -1,3 +1,4 @@
+export DE=xfce
 # Capslock = ctrl
 setxkbmap -option ctrl:nocaps
 # Load Xresources

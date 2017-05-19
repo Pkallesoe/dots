@@ -1,0 +1,32 @@
+* use "swiper" for search
+
+* Turn off menu bar
+#+BEGIN_SRC emacs-lisp
+(menu-bar-mode -1)
+#+END_SRC
+* Line
+** Hide minor modes in the mode line
+#+BEGIN_SRC emacs-lisp
+(setq rm-blacklist ".*")
+#+END_SRC
+** Display battery
+#+BEGIN_SRC emacs-lisp
+(display-battery-mode 1)
+#+END_SRC
+** Display Time
+#+BEGIN_SRC emacs-lisp
+(display-time-mode 1)
+(setq display-time-string-forms
+       '((propertize (concat " " 24-hours ":" minutes " "))))
+#+END_SRC
+* Open URLs with xdg-open
+#+BEGIN_SRC emacs-lisp
+(setq browse-url-browser-function 'browse-url-xdg-open)
+#+END_SRC
+
+* Ido-mode
+#+BEGIN_SRC emacs-lisp
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+#+END_SRC
