@@ -53,8 +53,8 @@
 * Magit
 #+BEGIN_SRC emacs-lisp
 (use-package magit
-  :ensure t)
-
+  :ensure t
+  :bind ("C-x g" . magit-status))
 #+END_SRC
 * Org-mode
 Activate org-columns with C-c C-x C-c while on a top-level heading,

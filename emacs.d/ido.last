@@ -2,25 +2,33 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/home/work/" . "Documents/")
+ ("/home/work/.dots/" . "emacs.d/")
+ ("/home/work/" . ".dots/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/work/.dots/emacs.d/"
  "/home/work/Documents/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "settings.org"
+ "settings.el"
  "nolease.org"
  "FKOPrivateVLANFejlsøgning.pdf"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/work/Documents/" (22814 46999 292905 18000) "#kollegienet.org#" "wifi.org" ".#kollegienet.org" "nolease.org~" "nolease.org" "notes.org" "kollegienet.org~" "notes.org~" "beretninger.org" "bruger oprettelse/" "../" "løn/" "FKOPrivateVLANFejlsøgning.pdf" "git.server.org" "kollegienet.org" "./")
+ ("/home/work/.dots/emacs.d/" (22833 7484 883190 731000) "ido.last" "settings.org~" "#settings.el#" "auto-save-list/" "init.el~" "init.el" "elpa/" "settings.org" "../" "./" "ido.last~" "settings.el")
 
- ("/home/work/" (22823 58707 93461 527000) "temp/" ".openoffice/" "Downloads/" "Documents/" ".pki/" ".tmux/" ".java/" ".gnupg/" ".xinit" "ownCloud/" ".xinitrc" ".ssh/" ".gnome/" ".bash_history" ".zshrc" "projects/" ".bash_profile" ".bash_logout" ".gtk-bookmarks" ".mozilla/" "../" ".Xresources" ".vim/" ".xserverrc" ".gitconfig" "todo.org" "bin/" ".fzf.zsh" ".config/" ".tmux.conf" ".local/" ".dots/" "Desktop/" "./" ".fzf.bash" ".aliases" ".viminfo" ".dots_bk/" ".emacs.d/" ".IdeaIC2016.3/" ".lesshst" ".vimrc" ".Xauthority" ".cache/" ".bashrc" ".fzf/")
+ ("/home/work/.dots/" (22829 7696 176736 873000) "xinitrc" "xserverrc" "rc.xml" "xmonad.hs" "aliases" "bashrc" "setup.sh" "tmux.conf" "autostart" "emacs.d/" ".git/" "../" "vimrc" "bin/" "Xresources" "./")
+
+ ("/home/work/" (22833 6764 219880 888000) "temp/" ".openoffice/" "Downloads/" "Documents/" ".pki/" ".tmux/" ".java/" ".gnupg/" ".xinit" "ownCloud/" ".xinitrc" ".ssh/" ".gnome/" ".bash_history" ".zshrc" "projects/" ".bash_profile" ".bash_logout" ".gtk-bookmarks" ".mozilla/" "database.txt" "../" ".Xresources" ".vim/" ".xserverrc" ".gitconfig" "todo.org" "bin/" ".fzf.zsh" ".config/" ".tmux.conf" ".local/" ".dots/" "Desktop/" "./" ".fzf.bash" ".aliases" ".viminfo" ".dots_bk/" ".emacs.d/" ".IdeaIC2016.3/" ".lesshst" ".vimrc" ".Xauthority" ".cache/" ".bashrc" ".fzf/")
+
+ ("/home/work/Documents/" (22814 46999 292905 18000) "#kollegienet.org#" "wifi.org" ".#kollegienet.org" "nolease.org~" "nolease.org" "notes.org" "kollegienet.org~" "notes.org~" "beretninger.org" "bruger oprettelse/" "../" "løn/" "FKOPrivateVLANFejlsøgning.pdf" "git.server.org" "kollegienet.org" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
