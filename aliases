@@ -1,7 +1,10 @@
-alias dk="setxkbmap dk"
-alias us="setxkbmap us"
-alias x="xinit"
-alias v="vim"
-alias fkovpn="sudo openconnect vpn.kollegienet.dk --authgroup tunnel_all --reconnect-timeout 300"
-alias e="emacs"
+alias dk='setxkbmap dk'
+alias us='setxkbmap us'
+alias x='xinit'
+alias v='vim'
+alias fkovpn='sudo openconnect vpn.kollegienet.dk --authgroup tunnel_all --reconnect-timeout 300'
+alias e='emacs'
 alias ls='ls --color=auto --group-directories-first -h'
+
+alias pu='sudo pacman -Syu'
+alias pacs='sudo pacman -Ss'

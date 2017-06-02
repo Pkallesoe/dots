@@ -33,3 +33,6 @@
 
 (use-package magit
   :ensure t)
+
+;; Set default column view headings: Task Total-Time Time-Stamp
+(setq org-columns-default-format "%50ITEM(Task) %10CLOCKSUM %16TIMESTAMP_IA")
