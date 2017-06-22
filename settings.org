@@ -1,0 +1,73 @@
+* Use-package
+#+BEGIN_SRC emacs-lisp
+(require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
+(require 'diminish)
+(require 'bind-key)
+
+#+END_SRC
+* use "swiper" for search
+
+* Turn off menu bar
+#+BEGIN_SRC emacs-lisp
+(menu-bar-mode -1)
+#+END_SRC
+* Line
+** Hide minor modes in the mode line
+#+BEGIN_SRC emacs-lisp
+(setq rm-blacklist ".*")
+#+END_SRC
+** Display battery
+#+BEGIN_SRC emacs-lisp
+(display-battery-mode 1)
+#+END_SRC
+** Display Time
+#+BEGIN_SRC emacs-lisp
+(display-time-mode 1)
+(setq display-time-string-forms
+       '((propertize (concat " " 24-hours ":" minutes " "))))
+#+END_SRC
+* Open URLs with xdg-open
+#+BEGIN_SRC emacs-lisp
+(setq browse-url-browser-function 'browse-url-xdg-open)
+#+END_SRC
+
+* Ido-mode
+#+BEGIN_SRC emacs-lisp
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+#+END_SRC
+  
+* Magit
+#+BEGIN_SRC emacs-lisp
+(use-package magit
+  :ensure t
+<<<<<<< HEAD
+  :bind ("C-x g" . magit-status)
+  :bind ("C-x M-g" . magit-dispatch-popup)
+  :config
+    (global-magit-file-mode))
+=======
+  :bind ("C-x g" . magit-status))
+>>>>>>> 721e03c74e2da6d16b0d6726029b4e80e812bc7a
+#+END_SRC
+* Org-mode
+Activate org-columns with C-c C-x C-c while on a top-level heading,
+which will allow you to view the time you've spent at the different levels
+(you can exit the view by pressing q):
+#+BEGIN_SRC emacs-lisp
+;; Set default column view headings: Task Total-Time Time-Stamp
+(setq org-columns-default-format "%50ITEM(Task) %10CLOCKSUM %16TIMESTAMP_IA")
+#+END_SRC
