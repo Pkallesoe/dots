@@ -1,6 +1,7 @@
 #! /bin/bash
 u="$USER"
 
+mkdir ~/.emacs.d
 echo "Linking files..."
 ln -sf $(pwd)/xinit ~/.xinit
 ln -sf $(pwd)/Xresources ~/.Xresources
@@ -10,7 +11,8 @@ ln -sf $(pwd)/xserverrc ~/.xserverrc
 ln -sf $(pwd)/bashrc ~/.bashrc
 ln -sf $(pwd)/bin ~/bin
 ln -sf $(pwd)/tmux.conf ~/.tmux.conf
-ln -sf $(pwd)/emacs.d ~/.emacs.d
+ln -sf $(pwd)/settings.org ~/.emacs.d/settings.org
+ln -sf $(pwd)/init.el ~/.emacs.d/init.el
 if [ "$u" == "peter" ] ; then
 	ln -sf $(pwd)/xmonad.hs ~/.xmonad/xmonad.hs
 fi
