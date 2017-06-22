@@ -1,4 +1,10 @@
 
+(setq use-package-always-ensure t)
+
+(use-package zenburn-theme
+:ensure t)
+(load-theme 'zenburn t)
+
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -32,7 +38,11 @@
 (ido-mode 1)
 
 (use-package magit
-  :ensure t)
+  :ensure t
+  :bind ("C-x g" . magit-status))
+
+;; Set default column view headings: Task Total-Time Time-Stamp
+(setq org-columns-default-format "%50ITEM(Task) %10CLOCKSUM %16TIMESTAMP_IA")
 
 (use-package evil
    :ensure t
@@ -85,3 +95,6 @@
      (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
      (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
      (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+
+(use-package multiple-cursors
+   :ensure t)

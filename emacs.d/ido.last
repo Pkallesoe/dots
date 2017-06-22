@@ -7,33 +7,40 @@
  ("/home/peter/programming/c/" . "learning/")
  ("/home/peter/programming/" . "c/")
  ("/home/peter/" . ".dots/")
+ ("/home/work/.dots/" . "emacs.d/")
+ ("/home/work/" . ".dots/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
  "/home/peter/.dots/emacs.d/"
  "/home/peter/programming/c/learning/"
+ "/home/work/.dots/emacs.d/"
+ "/home/work/Documents/"
 )
 
 ;; ----- ido-work-file-list -----
 (
  "settings.org"
+ "init.el"
  "settings.el"
  "fahrenheit-celsius-v3.c"
  "fahrenheit-celsius-v2.c"
+ "nolease.org"
+ "FKOPrivateVLANFejlsøgning.pdf"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/peter/.dots/emacs.d/" (22850 39037 423343 480000) "ido.last" "settings.org~" "auto-save-list/" ".#settings.org" "init.el~" "init.el" "eshell/" "elpa/" "settings.org" "../" "#settings.org#" "./" "ido.last~" "settings.el" "smex-items")
+ ("/home/peter/.dots/emacs.d/" (22855 62963 176669 993000) "ido.last" "settings.org~" "auto-save-list/" "init.el~" "init.el" "eshell/" "elpa/" "settings.org" "../" "./" "ido.last~" "settings.el" "smex-items")
 
- ("/home/peter/" (22849 28132 393464 61000) "Downloads/" "Documents/" ".pki/" ".tmux/" ".java/" ".gnupg/" ".conkeror.mozdev.org/" "programming/" ".xinit" ".xinitrc" "Using Emacs - 12 - flycheck and Jedi for Python-wbj_Wjm1Tuw.mp4" ".lein/" ".ssh/" ".gnome/" ".bash_history" ".zshrc" "Test.class" "Test.java~" ".mplayer/" "usb/" ".bash_profile" ".dmenu_cache" ".links/" ".ibam/" ".bash_logout" "emacs-clojure-setup/" "Test.java" ".mozilla/" "gits/" ".Xresources" ".vim/" "#Test.java#" ".xserverrc" ".gitconfig" ".sbt/" "FKOPrivateVLANFejlsøgning.pdf" "bin/" ".zshrc~" "kollegienet.org" ".fzf.zsh" ".config/" ".ivy2/" ".tmux.conf" ".local/" "media/" ".dots/" "Desktop/" "pacman.spit" ".xmonad/" ".fzf.bash" ".aliases" "test.html" ".viminfo" ".emacs.d/" ".lesshst" ".vimrc" ".Xauthority" ".cache/" ".bashrc" ".fzf/" "../" "./")
+ ("/home/peter/programming/c/learning/" (22855 62666 973335 659000) "exercise1-13" "1.c~" "test" "fahrenheit-celsius.c" "1.c" "exercise1-13.c~" "fahrenheit-celsius.c~" "exercise1-13.c" "fc-v3.out" "a.out" "../" "#1.c#" "test.c" "fahrenheit-celsius-v2.out" "fahrenheit-celsius-v3.c" "fahrenheit-celsius-v3.c~" "test.c~" "./" "fahrenheit-celsius-v2.c~" "fahrenheit-celsius-v2.c")
 
- ("/home/peter/.dots/" (22814 46033 146269 844000) "xinitrc" "xserverrc" "rc.xml" "xmonad.hs" "aliases" "bashrc" "setup.sh" "tmux.conf" "autostart" "emacs.d/" ".git/" "../" "vimrc" "bin/" "Xresources" "./")
+ ("/home/peter/.dots/" (22850 63812 666675 10000) "xinitrc" "xserverrc" "rc.xml" "xmonad.hs" "aliases" "bashrc" "setup.sh" "tmux.conf" "autostart" "emacs.d/" ".git/" "../" "vimrc" "bin/" "Xresources" "./")
+
+ ("/home/peter/" (22855 59951 223571 557000) "Downloads/" "Documents/" ".pki/" ".tmux/" ".java/" ".gnupg/" ".conkeror.mozdev.org/" "programming/" ".xinit" ".xinitrc" "Using Emacs - 12 - flycheck and Jedi for Python-wbj_Wjm1Tuw.mp4" ".lein/" ".ssh/" ".gnome/" ".bash_history" ".zshrc" "Test.class" "Test.java~" ".mplayer/" "usb/" ".bash_profile" ".dmenu_cache" ".links/" ".ibam/" ".bash_logout" "emacs-clojure-setup/" "Test.java" ".mozilla/" "gits/" ".Xresources" ".vim/" "#Test.java#" ".xserverrc" ".gitconfig" ".sbt/" "FKOPrivateVLANFejlsøgning.pdf" "bin/" ".zshrc~" "kollegienet.org" ".fzf.zsh" ".config/" ".ivy2/" ".tmux.conf" ".local/" "media/" ".dots/" "Desktop/" "pacman.spit" ".xmonad/" ".fzf.bash" ".aliases" "test.html" ".viminfo" ".emacs.d/" ".lesshst" ".vimrc" ".Xauthority" ".cache/" ".bashrc" ".fzf/" "../" "./")
 
  ("/home/" (22675 25909 86674 695000) "peter/" "../" "study/" "shared/" "./" "lost+found/" "work/")
-
- ("/home/peter/programming/c/learning/" (22845 7943 508025 798000) "1.c~" "fahrenheit-celsius.c" "1.c" "fahrenheit-celsius.c~" "a.out" "../" "#1.c#" "fahrenheit-celsius-v2.out" "./" "fahrenheit-celsius-v2.c~" "fahrenheit-celsius-v2.c")
 
  ("/home/peter/programming/c/" (22844 18445 11332 381000) "../" "./" "learning/")
 
@@ -42,6 +49,14 @@
  ("/home/peter/programming/scala/" (22763 32380 23398 692000) "../" "./" "test-project/" "target/")
 
  ("/home/peter/.conkeror.mozdev.org/" (22774 906 293339 523000) "conkeror/" "../" "./")
+
+ ("/home/work/.dots/emacs.d/" (22833 7484 883190 731000) "ido.last" "settings.org~" "#settings.el#" "auto-save-list/" "init.el~" "init.el" "elpa/" "settings.org" "../" "./" "ido.last~" "settings.el")
+
+ ("/home/work/.dots/" (22829 7696 176736 873000) "xinitrc" "xserverrc" "rc.xml" "xmonad.hs" "aliases" "bashrc" "setup.sh" "tmux.conf" "autostart" "emacs.d/" ".git/" "../" "vimrc" "bin/" "Xresources" "./")
+
+ ("/home/work/" (22833 6764 219880 888000) "temp/" ".openoffice/" "Downloads/" "Documents/" ".pki/" ".tmux/" ".java/" ".gnupg/" ".xinit" "ownCloud/" ".xinitrc" ".ssh/" ".gnome/" ".bash_history" ".zshrc" "projects/" ".bash_profile" ".bash_logout" ".gtk-bookmarks" ".mozilla/" "database.txt" "../" ".Xresources" ".vim/" ".xserverrc" ".gitconfig" "todo.org" "bin/" ".fzf.zsh" ".config/" ".tmux.conf" ".local/" ".dots/" "Desktop/" "./" ".fzf.bash" ".aliases" ".viminfo" ".dots_bk/" ".emacs.d/" ".IdeaIC2016.3/" ".lesshst" ".vimrc" ".Xauthority" ".cache/" ".bashrc" ".fzf/")
+
+ ("/home/work/Documents/" (22814 46999 292905 18000) "#kollegienet.org#" "wifi.org" ".#kollegienet.org" "nolease.org~" "nolease.org" "notes.org" "kollegienet.org~" "notes.org~" "beretninger.org" "bruger oprettelse/" "../" "løn/" "FKOPrivateVLANFejlsøgning.pdf" "git.server.org" "kollegienet.org" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
