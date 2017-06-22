@@ -1,3 +1,13 @@
+* Global Settings
+#+BEGIN_SRC emacs-lisp
+(setq use-package-always-ensure t)
+#+END_SRC
+* Theme
+  #+BEGIN_SRC emacs-lisp
+  (use-package zenburn-theme
+  :ensure t)
+  (load-theme 'zenburn t)
+  #+END_SRC
 * Use-package
 #+BEGIN_SRC emacs-lisp
 (require 'package)
@@ -18,7 +28,6 @@
 
 #+END_SRC
 * use "swiper" for search
-
 * Turn off menu bar
 #+BEGIN_SRC emacs-lisp
 (menu-bar-mode -1)
@@ -54,14 +63,7 @@
 #+BEGIN_SRC emacs-lisp
 (use-package magit
   :ensure t
-<<<<<<< HEAD
-  :bind ("C-x g" . magit-status)
-  :bind ("C-x M-g" . magit-dispatch-popup)
-  :config
-    (global-magit-file-mode))
-=======
   :bind ("C-x g" . magit-status))
->>>>>>> 721e03c74e2da6d16b0d6726029b4e80e812bc7a
 #+END_SRC
 * Org-mode
 Activate org-columns with C-c C-x C-c while on a top-level heading,
@@ -70,4 +72,69 @@ which will allow you to view the time you've spent at the different levels
 #+BEGIN_SRC emacs-lisp
 ;; Set default column view headings: Task Total-Time Time-Stamp
 (setq org-columns-default-format "%50ITEM(Task) %10CLOCKSUM %16TIMESTAMP_IA")
+#+END_SRC
+* Evil
+#+BEGIN_SRC emacs-lisp
+(use-package evil
+   :ensure t
+   :bind ("C-<f1>" . evil-mode))
+
+(use-package evil-leader
+      :commands (evil-leader-mode)
+      :ensure evil-leader
+      :demand evil-leader
+      :init
+      (global-evil-leader-mode)
+      :config
+      (progn
+        (evil-leader/set-leader ",")
+        ;; bindings from earlier
+        )
+;; keyboard shortcuts
+        (evil-leader/set-key
+          "a" 'ag-project
+          "A" 'ag
+          "b" 'ido-switch-buffer
+          "c" 'mc/mark-next-like-this
+          "C" 'mc/mark-all-like-this
+          "e" 'er/expand-region
+          "E" 'mc/edit-lines
+          "f" 'ido-find-file
+          "g" 'magit-status
+          "i" 'idomenu
+          "j" 'ace-jump-mode
+          "k" 'kill-buffer
+          "K" 'kill-this-buffer
+          "o" 'occur
+          "p" 'magit-find-file-completing-read
+          "r" 'recentf-ido-find-file
+          "s" 'ag-project
+          "t" 'ansi-term
+          "T" 'eshell
+          "w" 'save-buffer
+          "x" 'smex
+      )
+)
+
+(use-package evil-escape
+   :config (evil-escape-mode t)
+   :config(setq-default evil-escape-key-sequence "jk"))
+(evil-mode 1)
+
+;; Easy navigation between windows.
+     (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
+     (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
+     (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
+     (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+#+END_SRC
+;* Smex
+#+BEGIN_SRC emacs_lisp
+(use-package smex
+   :ensure t)
+#+END_SRC
+* Multiple-cursors
+#+BEGIN_SRC emacs-lisp
+(use-package multiple-cursors
+   :ensure t)
+
 #+END_SRC
