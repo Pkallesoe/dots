@@ -13,6 +13,7 @@ ln -sf $(pwd)/bin ~/bin
 ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/settings.org ~/.emacs.d/settings.org
 ln -sf $(pwd)/init.el ~/.emacs.d/init.el
+ln -sf $(pwd)/zshrc ~/.zshrc
 if [ "$u" == "peter" ] ; then
 	ln -sf $(pwd)/xmonad.hs ~/.xmonad/xmonad.hs
 fi
@@ -27,7 +28,11 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Prefix + I to install tmux plugins"
 echo "Prefix + U to update tmux plugins"
 
+mkdir ~/.vim
 mkdir ~/.vim/backup
 mkdir ~/.vim/swap
 mkdir ~/.vim/undo
 
+sh -c "$(curl -fsSL
+https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ 
