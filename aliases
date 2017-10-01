@@ -8,3 +8,5 @@ alias ls='ls --color=auto --group-directories-first -h'
 
 alias pu='sudo pacman -Syu'
 alias pacs='sudo pacman -Ss'
+
+alias ytmp3='youtube-dl --extract-audio --audio-format mp3'
