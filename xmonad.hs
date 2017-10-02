@@ -17,6 +17,11 @@ import XMonad.Layout.SimplestFloat
 import XMonad.Actions.FloatKeys
 import XMonad.Actions.CycleWS
 
+import XMonad.Util.NamedWindows
+import XMonad.Util.Run
+
+import XMonad.Hooks.UrgencyHook
+
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -70,6 +75,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
+
+    -- Sleep
+    , ((0,		    0x1008FF2F), spawn "systemctl suspend")
+
+    -- Lock
+    , ((0,		    0x1008FF2D), spawn "i3lock --fuzzy")
 
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
@@ -266,7 +277,9 @@ myStartupHook = return ()
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
+main = xmonad 
+	 $ withUrgencyHook LibNotifyUrgencyHook
+	 $ defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
@@ -347,3 +360,12 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "mod-button1  Set the window to floating mode and move by dragging",
     "mod-button2  Raise the window to the top of the stack",
     "mod-button3  Set the window to floating mode and resize by dragging"]
+
+data LibNotifyUrgencyHook = LibNotifyUrgencyHook deriving (Read, Show)
+
+instance UrgencyHook LibNotifyUrgencyHook where
+    urgencyHook LibNotifyUrgencyHook w = do
+        name     <- getName w
+        Just idx <- fmap (W.findTag w) $ gets windowset
+
+        safeSpawn "notify-send" [show name, "workspace " ++ idx]

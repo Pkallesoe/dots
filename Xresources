@@ -1,6 +1,8 @@
 URxvt*scrollBar: false
 urxvt*foreground: white
 urxvt*background: black
+URxvt*urgentOnBell: true
+URxvt*visualBell:   false
 
 *color0:  #2E3436
 *color1:  #a40000

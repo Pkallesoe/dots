@@ -1,0 +1,6 @@
+#redshift / Brightness control
+redshift -o -l 0:0 -b 0.8 -t 6500:6500
+
+#xbacklight / Brightness control other than redshift
+$ xbacklight -inc 10
+$ xbacklight -dec 10
