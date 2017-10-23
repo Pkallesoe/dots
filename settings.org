@@ -138,3 +138,24 @@ which will allow you to view the time you've spent at the different levels
    :ensure t)
 
 #+END_SRC
+
+* Linum-relative
+#+BEGIN_SRC emacs-lisp
+(use-package linum-relative
+   :ensure t)
+
+  (global-linum-mode t)
+  (linum-relative-mode t)
+  (setq linum-relative-current-symbol "")
+#+END_SRC
+
+* Underline current line
+#+BEGIN_SRC emacs-lisp
+(global-hl-line-mode 1)
+(set-face-attribute hl-line-face nil :underline t)
+#+END_SRC
+  
+* yes or no -> y or n
+#+BEGIN_SRC emacs-lisp
+(defalias 'yes-or-no-p 'y-or-n-p)
+#+END_SRC

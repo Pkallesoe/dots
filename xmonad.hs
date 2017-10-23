@@ -74,13 +74,32 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "dmenu_run")
+    --, ((modm,               xK_p     ), spawn "dmenu_run")
+    , ((modm,               xK_p     ), spawn "rofi -show run")
 
     -- Sleep
     , ((0,		    0x1008FF2F), spawn "systemctl suspend")
 
     -- Lock
     , ((0,		    0x1008FF2D), spawn "i3lock --fuzzy")
+    
+    -- Brightness up
+    , ((0,		    0x1008ff02), spawn "xbacklight +5")
+
+    -- Brightness down
+    , ((0,		    0x1008ff03), spawn "xbacklight -5")
+    
+    -- Battery info
+    , ((0,		    0x1008ff93), spawn "~/bin/battery.sh")
+
+    -- Firefox
+    --, ((modm,		    xK_f    ), spawn "firefox")
+
+    -- Rofi Wifi Menu // wierd 
+    --, ((modm,		    xK_F1   ), spawn "/home/peter/bin/rofi-wifi-menu.sh config")
+
+    -- Urxvt
+    , ((modm,		    xK_u    ), spawn "urxvt -e tmux")
 
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
@@ -240,6 +259,7 @@ myLayout = smartBorders $  tiled ||| Full ||| Mirror tiled
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
+    , className =? "File Operation Progress" --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
