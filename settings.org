@@ -73,6 +73,14 @@ which will allow you to view the time you've spent at the different levels
 ;; Set default column view headings: Task Total-Time Time-Stamp
 (setq org-columns-default-format "%50ITEM(Task) %10CLOCKSUM %16TIMESTAMP_IA")
 #+END_SRC
+#+BEGIN_SRC emacs-lisp
+     (defun org-summary-todo (n-done n-not-done)
+       "Switch entry to DONE when all subentries are done, to TODO otherwise."
+       (let (org-log-done org-log-states)   ; turn off logging
+         (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+	
+     (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
+#+END_SRC
 * Evil
 #+BEGIN_SRC emacs-lisp
 (use-package evil

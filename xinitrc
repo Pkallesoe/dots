@@ -16,10 +16,13 @@ sh ~/bin/notify.sh
 
 # Lock on suspend
 # xss-lock -- i3lock --fuzzy &
-xss-lock -- i3lock &
+xss-lock -- i3lock -c 000000&
 
 # Transparency
 xcompmgr -c &
 
 # Start window-manger:
-exec xmonad
+#exec xmonad
+sxhkd &
+urxvt -e tmux &
+exec bspwm

@@ -81,7 +81,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,		    0x1008FF2F), spawn "systemctl suspend")
 
     -- Lock
-    , ((0,		    0x1008FF2D), spawn "i3lock --fuzzy")
+    , ((0,		    0x1008FF2D), spawn "i3lock")
     
     -- Brightness up
     , ((0,		    0x1008ff02), spawn "xbacklight +5")

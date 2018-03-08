@@ -81,3 +81,15 @@ set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
 set clipboard=unnamedplus
+
+ino " ""<left>
+ino ' ''<left>
+ino ( ()<left>
+ino [ []<left>
+ino { {}<left>
+ino {<CR> {<CR>}<ESC>O
+ino {;<CR> {<CR>};<ESC>O
+ino ;; <ESC>A;
+ino ]] <ESC>A
+ino )) <ESC>A
+ino }} <ESC>A
